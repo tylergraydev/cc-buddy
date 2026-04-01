@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+
+# build
+dist/
+
+# tauri
+src-tauri/target/
+
+# env
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/

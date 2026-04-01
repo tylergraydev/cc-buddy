@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  width: 300px;
+  height: 400px;
+}
+
+/* Sprite base */
+.sprite {
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+}
+
+/* Idle: 6 frames */
+.sprite-idle {
+  width: 64px;
+  height: 64px;
+  background-size: 384px 64px;
+  animation: sprite-idle 1.2s steps(6) infinite;
+}
+
+@keyframes sprite-idle {
+  from { background-position: 0 0; }
+  to { background-position: -384px 0; }
+}
+
+/* Walk: 6 frames */
+.sprite-walk {
+  width: 64px;
+  height: 64px;
+  background-size: 384px 64px;
+  animation: sprite-walk 0.6s steps(6) infinite;
+}
+
+@keyframes sprite-walk {
+  from { background-position: 0 0; }
+  to { background-position: -384px 0; }
+}
+
+/* Sit: 4 frames */
+.sprite-sit {
+  width: 64px;
+  height: 64px;
+  background-size: 256px 64px;
+  animation: sprite-sit 1.6s steps(4) infinite;
+}
+
+@keyframes sprite-sit {
+  from { background-position: 0 0; }
+  to { background-position: -256px 0; }
+}
+
+/* Look: 4 frames */
+.sprite-look {
+  width: 64px;
+  height: 64px;
+  background-size: 256px 64px;
+  animation: sprite-look 0.8s steps(4) infinite;
+}
+
+@keyframes sprite-look {
+  from { background-position: 0 0; }
+  to { background-position: -256px 0; }
+}
+
+/* Speech bubble fade */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
