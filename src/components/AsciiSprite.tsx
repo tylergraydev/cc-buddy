@@ -6,9 +6,11 @@ interface AsciiSpriteProps {
   state: BuddyState;
   direction: "left" | "right";
   species: string;
+  eye?: string;
+  hat?: string;
 }
 
-export function AsciiSprite({ state, direction, species }: AsciiSpriteProps) {
+export function AsciiSprite({ state, direction, species, eye = "·", hat = "none" }: AsciiSpriteProps) {
   const [tick, setTick] = useState(0);
 
   useEffect(() => {
@@ -18,7 +20,7 @@ export function AsciiSprite({ state, direction, species }: AsciiSpriteProps) {
     return () => clearInterval(interval);
   }, []);
 
-  const lines = getAsciiFrame(state, tick, species);
+  const lines = getAsciiFrame(state, tick, species, eye, hat);
 
   return (
     <pre
