@@ -2,6 +2,8 @@
 
 A desktop companion app inspired by [Claude Code's /buddy](https://claude.ai/code) system and [Tameagoatchi](https://store.steampowered.com/app/3757430/Tameagoatchi/). Your buddy lives on your desktop as an animated pixel art pet that wanders around and occasionally comments.
 
+![CC Buddy with Claude Code](assets/screenshot.png)
+
 ## Features
 
 - **18 species** from Claude Code's buddy system — capybara, duck, dragon, robot, ghost, and more
