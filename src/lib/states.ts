@@ -1,4 +1,4 @@
-export type BuddyState = "idle" | "walking" | "sitting" | "looking" | "talking";
+export type BuddyState = "idle" | "walking" | "sitting" | "looking" | "talking" | "dancing";
 
 export interface StateConfig {
   minDuration: number;
@@ -11,10 +11,11 @@ export const STATE_CONFIG: Record<BuddyState, StateConfig> = {
     minDuration: 3000,
     maxDuration: 8000,
     transitions: [
-      { state: "walking", weight: 40 },
-      { state: "sitting", weight: 25 },
-      { state: "looking", weight: 25 },
-      { state: "talking", weight: 10 },
+      { state: "walking", weight: 38 },
+      { state: "sitting", weight: 24 },
+      { state: "looking", weight: 24 },
+      { state: "talking", weight: 9 },
+      { state: "dancing", weight: 5 },
     ],
   },
   walking: {
@@ -30,9 +31,10 @@ export const STATE_CONFIG: Record<BuddyState, StateConfig> = {
     minDuration: 5000,
     maxDuration: 12000,
     transitions: [
-      { state: "idle", weight: 50 },
-      { state: "looking", weight: 30 },
-      { state: "talking", weight: 20 },
+      { state: "idle", weight: 47 },
+      { state: "looking", weight: 28 },
+      { state: "talking", weight: 18 },
+      { state: "dancing", weight: 7 },
     ],
   },
   looking: {
@@ -50,6 +52,15 @@ export const STATE_CONFIG: Record<BuddyState, StateConfig> = {
     transitions: [
       { state: "idle", weight: 70 },
       { state: "sitting", weight: 30 },
+    ],
+  },
+  dancing: {
+    minDuration: 3000,
+    maxDuration: 5000,
+    transitions: [
+      { state: "idle", weight: 60 },
+      { state: "talking", weight: 25 },
+      { state: "sitting", weight: 15 },
     ],
   },
 };
