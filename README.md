@@ -16,8 +16,12 @@ A desktop companion app inspired by [Claude Code's /buddy](https://claude.ai/cod
 
 - **18 species** from Claude Code's buddy system — capybara, duck, dragon, robot, ghost, and more
 - **Pixel art & ASCII modes** — toggle between pixel sprites and classic terminal-style ASCII art
-- **Wandering behavior** — state machine drives idle, walking, sitting, looking, and talking behaviors
-- **Speech bubbles** — your buddy pops up with commentary (personality-driven messages)
+- **Syncs with Claude Code** — reads your buddy's species, eye style, hat, and rarity from your Claude Code config
+- **Hats & eyes** — wizard hat, crown, tophat, and all 6 eye styles rendered in ASCII mode
+- **Wandering behavior** — state machine drives idle, walking, sitting, looking, talking, and dancing
+- **Dancing** — rare animation where your buddy busts a move with musical notes
+- **Petting** — click and drag on your buddy to pet them — they wiggle and hearts float up
+- **Speech bubbles** — your buddy pops up with personality-driven commentary
 - **Transparent window** — buddy floats on your desktop with no background
 - **System tray** — show/hide buddy, toggle style, quit from the menu bar
 - **Cross-platform** — macOS, Windows, Linux
@@ -47,7 +51,7 @@ npm run tauri build
 | Action | Effect |
 |--------|--------|
 | **Click** buddy | Show a speech bubble |
-| **Click + drag on buddy** | Pet (hearts + wiggle) |
+| **Click + drag on buddy** | Pet (wiggle + hearts) |
 | **Drag** background | Move the window |
 | **Tray menu** | Show/Hide, Toggle Pixel/ASCII, Quit |
 

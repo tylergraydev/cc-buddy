@@ -32,7 +32,7 @@ export function Buddy() {
   const [clickMessage, setClickMessage] = useState<string | null>(null);
   const [debugSpeciesIdx, setDebugSpeciesIdx] = useState<number | null>(null);
   const onDragMouseDown = useDragWindow();
-  const { isPetting, hearts, onPetStart, onPetMove, onPetEnd } = usePetting();
+  const { isPetting, showHeart, onPetStart, onPetMove, onPetEnd } = usePetting();
   const { style } = useSpriteStyle();
 
   const isDev = import.meta.env.DEV;
@@ -100,7 +100,7 @@ export function Buddy() {
             />
           )}
         </div>
-        <Hearts hearts={hearts} />
+        {showHeart && <Hearts />}
       </div>
     </div>
   );
